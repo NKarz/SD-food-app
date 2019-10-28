@@ -23,6 +23,19 @@
   color: #61dafb;
 }
 
+body{
+  background-image: url("/549556-PJZUEM-313.jpg");
+  background-position: center;
+  background-blend-mode: darken;
+
+}
+
+#contents{
+  background-color: white;
+  opacity: .8;
+   padding: 50px 50px 50px 50px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

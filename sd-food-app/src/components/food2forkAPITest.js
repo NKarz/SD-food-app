@@ -12,14 +12,18 @@ class Food2forkAPITest extends React.Component {
   render()
   {
     return (
-      <div>
-      this is a test
+      <div className="App">
+        <div>
+              <button onClick={() => this.getRecipes()}>Show recipes</button>
+        </div>
+
+        <div>
+          {this.state.recipes.map(res => <div> <h2><a href={res.source_url}> {res.title} </a> </h2> <img src={res.image_url}/> </div>)}
+        </div>
       </div>
     );
   }
-}
-
-function getRecipes(){
+   getRecipes(){
   var api_key = '51851afa92a60432329217d5876bdf01';
   var base_url;
 
@@ -30,17 +34,13 @@ function getRecipes(){
    .then((response) => {
      return response.json();
    })
-   .then((data) => {
+   .then(data => {
      this.setState({
        recipes: data.recipes
    });
-   console.log(data);
+   console.log("DATA " + data);
    })
 }
-
-
-
-
-
+}
 
 export default Food2forkAPITest;

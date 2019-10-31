@@ -18,19 +18,20 @@ class App extends React.Component {
 
     <div id="contents">
       <title>Yum.me</title>
-      <div class="row">
-        <div class="col">
-          <h4>What's in your fridge?</h4>
-          <div><ListOfIngredients /> </div>
-          <br></br>
-        </div>
-        <div class="col">
-        <div id="Recipe">
-        A Recipe goes here.
-        </div>
+      <div className="row">
+          <div className="col">
+            <h4>What's in your fridge?</h4>
+            <div><ListOfIngredients /> </div>
+            <Food2forkAPITest />
+            <br></br>
+          </div>
+          <div className="col">
+            <div id="Recipe">
+            A Recipe goes here.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </div>
     );
   }

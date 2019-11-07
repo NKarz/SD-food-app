@@ -3,6 +3,7 @@ import './App.css';
 import Bootstrap from './bootstrap/css/bootstrap.css';
 import ListOfIngredients from './components/ListOfIngredients.js';
 import Food2forkAPITest from './components/food2forkAPITest.js';
+import Main from './components/Main.js';
 
 class App extends React.Component {
   render()
@@ -21,9 +22,10 @@ class App extends React.Component {
       <div className="row">
           <div className="col">
             <h4>What's in your fridge?</h4>
-            <div><ListOfIngredients /> </div>
-            <Food2forkAPITest />
-            <br></br>
+            <div><Main /> </div>
+            // <div><ListOfIngredients /> </div>
+            // <Food2forkAPITest />
+            // <br></br>
           </div>
           <div className="col">
             <div id="Recipe">

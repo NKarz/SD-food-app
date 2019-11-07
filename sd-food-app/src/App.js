@@ -3,7 +3,11 @@ import './App.css';
 import Bootstrap from './bootstrap/css/bootstrap.css';
 import ListOfIngredients from './components/ListOfIngredients.js';
 import Food2forkAPITest from './components/food2forkAPITest.js';
+<<<<<<< HEAD
 import Main from './components/Main.js';
+=======
+import SignIn from './components/SignIn.js';
+>>>>>>> react-setup-branch
 
 class App extends React.Component {
   render()
@@ -16,7 +20,10 @@ class App extends React.Component {
     <h2>
       <center>Your guide to economic eating</center>
     </h2>
-
+    <div id = "SignIn">
+      <SignIn />
+    </div>
+    <br></br>
     <div id="contents">
       <title>Yum.me</title>
       <div className="row">

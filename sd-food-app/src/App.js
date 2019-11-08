@@ -3,11 +3,9 @@ import './App.css';
 import Bootstrap from './bootstrap/css/bootstrap.css';
 import ListOfIngredients from './components/ListOfIngredients.js';
 import Food2forkAPITest from './components/food2forkAPITest.js';
-<<<<<<< HEAD
 import Main from './components/Main.js';
-=======
 import SignIn from './components/SignIn.js';
->>>>>>> react-setup-branch
+
 
 class App extends React.Component {
   render()
@@ -30,13 +28,10 @@ class App extends React.Component {
           <div className="col">
             <h4>What's in your fridge?</h4>
             <div><Main /> </div>
-            // <div><ListOfIngredients /> </div>
-            // <Food2forkAPITest />
-            // <br></br>
           </div>
           <div className="col">
             <div id="Recipe">
-            A Recipe goes here.
+            <Food2forkAPITest />
             </div>
           </div>
         </div>

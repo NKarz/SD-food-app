@@ -1,19 +1,11 @@
 import React from 'react';
 import Bootstrap from '../bootstrap/css/bootstrap.css';
-
+import {Link} from 'react-router-dom';
 
 class SignIn extends React.Component {
   state = {
 
   }
-
-  // handleChange = (e) => {
-  //   console.log(e);
-  // }
-  // handleSubmit = (e) => {
-  //   console.log(e);
-  // }
-
 
   render(){
     return(
@@ -29,7 +21,7 @@ class SignIn extends React.Component {
             <input type="password" id="password" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
-            <button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Login</button>
+            <Link to="/main"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Login</button></Link>
           </div>
         </form>
       </div>

@@ -6,7 +6,6 @@ import * as serviceWorker from './serviceWorker';
 
 import {BrowserRouter, Route} from 'react-router-dom';
 
-import ListOfIngredients from './components/ListOfIngredients.js';
 import Food2forkAPITest from './components/food2forkAPITest.js';
 import SignIn from './components/SignIn.js';
 import Main from './components/Main.js';

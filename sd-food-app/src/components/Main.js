@@ -5,6 +5,13 @@ import SignIn from '../components/SignIn.js';
 
 
 class Main extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      ingredients: []
+    };
+  }
+
   render()
   {
      return (

@@ -15,12 +15,11 @@ class Food2forkAPITest extends React.Component {
       <div className="App">
         <div>
               <button onClick={() => this.getRecipes()}>Show recipes</button>
-              {console.log("Ingredients?" +  this.props.ingredients)}
+              {console.log("Ingredients?" +  this.state.ingredients)}
         </div>
 
         <div>
           {this.state.recipes.map(res => <div> <h2><a href={res.source_url}> {res.title} </a> </h2> <img src={res.image_url}/> </div>)}
-
         </div>
       </div>
     );

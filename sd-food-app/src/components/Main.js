@@ -35,12 +35,12 @@ class Main extends React.Component {
                    <input className="allCheckboxes" type="checkbox" value="Ketchup" /> Ketchup <br></br>
                    <input className="allCheckboxes" type="checkbox" value="Sugar" /> Sugar <br></br>
                    <br></br>
-                   <button type="button" className="btn btn-info" onClick={testfunction}>Submit</button>
+                   <button type="button" className="btn btn-info" onClick={() => this.testfunction()}>Submit</button>
               </div>
            </div>
            <div className="col">
              <div id="Recipe">
-             <Food2forkAPITest ingredients={checkedValues}/>
+             <Food2forkAPITest ingredients={this.state.ingredients}/>
              </div>
            </div>
          </div>
@@ -48,10 +48,10 @@ class Main extends React.Component {
      </div>
      );
   }
-}
-var checkedValues = [];
 
-function testfunction(){
+  testfunction(){
+    var checkedValues = [];
+
     var recipeEdit = document.getElementById("Recipe");
 
 
@@ -60,10 +60,14 @@ function testfunction(){
     for(var i =0; inputElements[i]; ++i){
       if(inputElements[i].checked){
         checkedValues.push(inputElements[i].value);
+        this.state.ingredients.push(inputElements[i].value);
       }
     }
-    console.log(checkedValues);
-  //  recipeEdit.innerHTML = "Test";
-  }
+    console.log("Ingredience");
+    console.log(this.state.ingredients);
+    //  recipeEdit.innerHTML = "Test";
+    }
+
+}
 
 export default Main;

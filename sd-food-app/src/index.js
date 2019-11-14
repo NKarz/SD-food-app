@@ -9,11 +9,13 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Food2forkAPITest from './components/food2forkAPITest.js';
 import SignIn from './components/SignIn.js';
 import Main from './components/Main.js';
+import SignUp from './components/SignUp.js';
 
 const routing = (
   <BrowserRouter>
     <Route exact path="/" component={SignIn}/>
     <Route path="/main" component={Main}/>
+    <Route path="/SignUp" component={SignUp}/>
   </BrowserRouter>
 )
 ReactDOM.render(routing, document.getElementById('root'));

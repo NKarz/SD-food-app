@@ -7,8 +7,10 @@ import SignIn from '../components/SignIn.js';
 class Main extends React.Component {
   constructor(props){
     super(props);
+
     this.state={
-      ingredients: []
+      ingredients: [],
+      displayAPI: false
     };
   }
 
@@ -40,7 +42,11 @@ class Main extends React.Component {
            </div>
            <div className="col">
              <div id="Recipe">
-             <Food2forkAPITest ingredients={this.state.ingredients}/>
+             {
+               (this.state.displayAPI)?(
+                 <Food2forkAPITest ingredients={(this.state.ingredients).join()} />
+               ) : (null)
+             }
              </div>
            </div>
          </div>
@@ -63,10 +69,29 @@ class Main extends React.Component {
         this.state.ingredients.push(inputElements[i].value);
       }
     }
-    console.log("Ingredience");
-    console.log(this.state.ingredients);
-    //  recipeEdit.innerHTML = "Test";
+    // console.log("Ingredience");
+    console.log("Ingredients in Main" + this.state.ingredients);
+
+    this.setState({
+      displayAPI: !this.state.displayAPI
+    })
+
+    console.log("DISPLAY?" + this.state.displayAPI);
+
+    if(this.state.displayAPI){
+      return(
+        <div>
+          <Food2forkAPITest ingredients={this.state.ingredients} />
+        </div>
+      );
     }
+    // return (
+    //   // <div>
+    //   // <Food2forkAPITest ingredients={this.state.ingredients} />
+    //   // </div>
+    //   );
+    }
+
 
 }
 

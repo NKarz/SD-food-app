@@ -5,7 +5,6 @@ class Food2forkAPITest extends React.Component {
   constructor(props){
     super(props);
     this.state={recipes: [],
-      ingredients: []
     };
   }
 
@@ -14,8 +13,10 @@ class Food2forkAPITest extends React.Component {
     return (
       <div className="App">
         <div>
+          {
+            console.log("Ingredients?" +  this.props.ingredients)
+          }
               <button onClick={() => this.getRecipes()}>Show recipes</button>
-              {console.log("Ingredients?" +  this.state.ingredients)}
         </div>
 
         <div>
@@ -24,11 +25,12 @@ class Food2forkAPITest extends React.Component {
       </div>
     );
   }
-   getRecipes(){
+
+ getRecipes(){
   var api_key = '51851afa92a60432329217d5876bdf01';
   var base_url;
 
-  base_url = 'https://www.food2fork.com/api/search?key=' + api_key + '&q=' + 'milk, eggs';
+  base_url = 'https://www.food2fork.com/api/search?key=' + api_key + '&q=' + this.props.ingredients;
 
   fetch(base_url)
    .then((response) => {

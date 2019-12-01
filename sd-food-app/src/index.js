@@ -12,6 +12,7 @@ import SignIn from './components/SignIn.js';
 import Main from './components/Main.js';
 import SignUp from './components/SignUp.js';
 
+
 var config = {
     apiKey: "AIzaSyDVteIZdlwMtaNINA5ZmkNvGgUYQ9FfOn8",
     authDomain: "yumme-a9bc0.firebaseapp.com",
@@ -22,8 +23,6 @@ var config = {
     appId: "1:343478442579:web:6d5fd0cc58807cb9b944a6",
     measurementId: "G-5FVK78GE90"
   };
-
-firebase.initializeApp(config);
 
 
 

@@ -2,7 +2,10 @@ import React from 'react';
 import Bootstrap from '../bootstrap/css/bootstrap.css';
 import Food2forkAPITest from '../components/food2forkAPITest.js';
 import SignIn from '../components/SignIn.js';
-import './Main.css';
+import {BrowserRouter, Route} from 'react-router-dom';
+//import * as serviceWorker from './serviceWorker';
+import * as firebase from 'firebase';
+import "./Main.css";
 
 class Main extends React.Component {
   constructor(props){
@@ -17,7 +20,9 @@ class Main extends React.Component {
   render()
   {
      return (
+       <body>
      <div>
+
      <title>Yum.me</title>
      <h1>
        <center>Yum.me!</center>
@@ -52,9 +57,17 @@ class Main extends React.Component {
                ) : (null)
              }
            </div>
+
+           <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+
+
          </div>
        </div>
      </div>
+
+     </body>
      );
   }
 

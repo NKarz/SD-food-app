@@ -6,6 +6,8 @@ import {BrowserRouter, Route} from 'react-router-dom';
 //import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
 import "./Main.css";
+const auth = firebase.auth();
+const db = firebase.firestore();
 
 class Main extends React.Component {
   constructor(props){
@@ -29,10 +31,12 @@ class Main extends React.Component {
      </h1>
      <h2>
        <center>Your guide to economic eating</center>
+       <button type="button" classname="btn btn-info" onClick={signOut}>Sign out</button>
      </h2>
      <div id="contents">
        <title>Yum.me</title>
        <div className="row">
+
            <div className="col">
              <h4>What's in your fridge?</h4>
              <div className="listOfIngredients">
@@ -110,5 +114,9 @@ class Main extends React.Component {
 
 
 }
-
+function signOut(){
+  auth.signOut().then(() => {
+    console.log('user signed out');
+  })
+}
 export default Main;

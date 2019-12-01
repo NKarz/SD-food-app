@@ -1,5 +1,7 @@
 import React from 'react';
 import Bootstrap from '../bootstrap/css/bootstrap.css';
+import './food2forkAPITest.css';
+
 
 class Food2forkAPITest extends React.Component {
   constructor(props){
@@ -11,10 +13,12 @@ class Food2forkAPITest extends React.Component {
   render()
   {
     return (
-              this.getRecipes(),
-            //  {this.state.recipes.map(res => <div> <h2><a href={res.source_url}> {res.title} </a> </h2> <img src={res.image_url}/> </div>)}
-              this.state.recipes.map(result => <div>{result.recipe.label}</div>)
-
+      <div className="listOfRecipes">
+        {this.getRecipes(),
+        this.state.recipes.map(result =>
+          <div><li><a href={result.recipe.url}>{result.recipe.label}</a></li></div>
+        )}
+        </div>
     );
   }
 

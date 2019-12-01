@@ -11,16 +11,10 @@ class Food2forkAPITest extends React.Component {
   render()
   {
     return (
-      <div className="App">
-        <div>
-              {this.getRecipes()}
+              this.getRecipes(),
             //  {this.state.recipes.map(res => <div> <h2><a href={res.source_url}> {res.title} </a> </h2> <img src={res.image_url}/> </div>)}
-              {this.state.recipes.map(result => <div>{result.recipe.label}</div>)}
-        </div>
+              this.state.recipes.map(result => <div>{result.recipe.label}</div>)
 
-        <div>
-        </div>
-      </div>
     );
   }
 

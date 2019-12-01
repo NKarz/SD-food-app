@@ -41,13 +41,11 @@ class Main extends React.Component {
               </div>
            </div>
            <div className="col">
-             <div id="Recipe">
              {
                (this.state.displayAPI)?(
                  <Food2forkAPITest ingredients={(this.state.ingredients).join()} />
                ) : (null)
              }
-             </div>
            </div>
          </div>
        </div>

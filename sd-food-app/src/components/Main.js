@@ -26,12 +26,13 @@ class Main extends React.Component {
      <div>
 
      <title>Yum.me</title>
+     <button type="button" classname="btn btn-info" onClick={signOut} id="logOutButton" >Sign out</button>
+
      <h1>
        <center>Yum.me!</center>
      </h1>
      <h2>
        <center>Your guide to economic eating</center>
-       <button type="button" classname="btn btn-info" onClick={signOut}>Sign out</button>
      </h2>
      <div id="contents">
        <title>Yum.me</title>

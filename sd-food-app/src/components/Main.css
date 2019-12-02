@@ -2,3 +2,7 @@
   max-height: 150px;
   overflow-y: scroll;
 }
+
+#logOutButton{
+  float: right;
+}

@@ -53,6 +53,8 @@ class Main extends React.Component {
               </div>
               <br></br>
               <button type="button" className="btn btn-info" onClick={() => this.testfunction()}>Submit</button>
+              <br></br><br></br>
+              <button type="button" className="btn btn-info" onClick={(takeScreenShot)}>Screenshot</button>
 
            </div>
            <div className="col">
@@ -120,4 +122,15 @@ function signOut(){
     console.log('user signed out');
   })
 }
+function takeScreenShot(){
+
+}
+auth.onAuthStateChanged(user => {
+  console.log(user)
+  if(user){
+
+  }else{
+    document.getElementById("logOutButton").style.display="none";
+  }
+})
 export default Main;

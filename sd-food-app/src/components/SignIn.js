@@ -50,6 +50,11 @@ class SignIn extends React.Component {
             <div className="input-field">
               <Link to="/SignUp"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Sign Up</button></Link>
             </div>
+            <br></br>
+            <div className="input-field">
+              <Link to="/main"><button type="button" className="btn pink lighten-1 z-depth-0">Continue as guest</button></Link>
+            </div>
+            <br></br>
           </form>
           <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
           <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>

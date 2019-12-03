@@ -79,6 +79,8 @@ class Main extends React.Component {
   }
 
   testfunction(){
+    this.state.ingredients = [];
+    
     var checkedValues = [];
 
     var recipeEdit = document.getElementById("Recipe");

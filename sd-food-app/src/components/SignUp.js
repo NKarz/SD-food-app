@@ -36,7 +36,7 @@ class SignUp extends React.Component {
               <input type="password" id="password" onChange={this.handleChange}/>
             </div>
             <div className="input-field">
-              <Link to="/"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Sign Up</button></Link>
+              <Link to="/main"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Sign Up</button></Link>
             </div>
           </form>
           <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>

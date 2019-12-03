@@ -44,16 +44,14 @@ class SignIn extends React.Component {
               <input type="password" id="password" onChange={this.handleChange}/>
             </div>
             <div className="input-field">
-              <Link to="/main"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Login</button></Link>
+              <button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Login</button>
             </div>
             <br></br>
             <div className="input-field">
               <Link to="/SignUp"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Sign Up</button></Link>
             </div>
             <br></br>
-            <div className="input-field">
-              <Link to="/main"><button type="button" className="btn pink lighten-1 z-depth-0">Continue as guest</button></Link>
-            </div>
+
             <br></br>
           </form>
           <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
@@ -82,6 +80,14 @@ function logFunction(){
     const password = document.getElementById("password").value;
 
     auth.signInWithEmailAndPassword(email, password);
+
+    auth.onAuthStateChanged(user => {
+      if (user){
+        window.location.href = "/Main";
+      }
+      //window.location.href = "/Main";
+    })
+
 }
 
 export default SignIn

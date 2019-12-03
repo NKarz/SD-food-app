@@ -3,6 +3,7 @@ import Bootstrap from '../bootstrap/css/bootstrap.css';
 import Food2forkAPITest from '../components/food2forkAPITest.js';
 import SignIn from '../components/SignIn.js';
 import {BrowserRouter, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 //import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
 import "./Main.css";
@@ -26,7 +27,8 @@ class Main extends React.Component {
      <div>
 
      <title>Yum.me</title>
-     <button type="button" classname="btn btn-info" onClick={signOut} id="logOutButton" >Sign out</button>
+     <button type="button" className="btn btn-info" onClick={signOut} id="logOutButton" >Sign out</button>
+     <Link to="/"><button type="button" className="btn btn-info" id="logInButton" >Sign In</button></Link>
 
      <h1>
        <center>Yum.me!</center>
@@ -54,7 +56,7 @@ class Main extends React.Component {
               <br></br>
               <button type="button" className="btn btn-info" onClick={() => this.testfunction()}>Submit</button>
               <br></br><br></br>
-              <button type="button" className="btn btn-info" onClick={(takeScreenShot)}>Screenshot</button>
+              <button type="button" className="btn btn-info" id="screenshotbutton" onClick={(takeScreenShot)}>Screenshot</button>
 
            </div>
            <div className="col">
@@ -80,7 +82,7 @@ class Main extends React.Component {
 
   testfunction(){
     this.state.ingredients = [];
-    
+
     var checkedValues = [];
 
     var recipeEdit = document.getElementById("Recipe");
@@ -130,9 +132,11 @@ function takeScreenShot(){
 auth.onAuthStateChanged(user => {
   console.log(user)
   if(user){
-
+    document.getElementById("logInButton").style.display="none";
   }else{
     document.getElementById("logOutButton").style.display="none";
+    document.getElementById("screenshotbutton").style.display="none";
+    document.getElementById("logInButton").style.display="block";
   }
 })
 export default Main;

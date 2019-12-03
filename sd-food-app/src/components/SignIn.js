@@ -48,7 +48,7 @@ class SignIn extends React.Component {
             </div>
             <br></br>
             <div className="input-field">
-              <Link to="/SignUp"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Sign Up</button></Link>
+              <Link to="/SignUp"><button type="button" className="btn pink lighten-1 z-depth-0" >Sign Up</button></Link>
             </div>
             <br></br>
 

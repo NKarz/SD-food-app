@@ -1,7 +1,7 @@
 import React from 'react';
 import Bootstrap from '../bootstrap/css/bootstrap.css';
 import {Link} from 'react-router-dom';
-import './SignIn.css';
+//import './SignIn.css';
 import {BrowserRouter, Route} from 'react-router-dom';
 //import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
@@ -36,7 +36,7 @@ class SignUp extends React.Component {
               <input type="password" id="password" onChange={this.handleChange}/>
             </div>
             <div className="input-field">
-              <Link to="/main"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction}>Sign Up</button></Link>
+              <Link to="/main"><button type="button" className="btn pink lighten-1 z-depth-0" onClick = {logFunction2}>Sign Up</button></Link>
             </div>
           </form>
           <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
@@ -58,7 +58,7 @@ class SignUp extends React.Component {
   }
 }
 var info = [];
-function logFunction(){
+function logFunction2(){
 
     info.push(document.getElementById("email").value);
     info.push(document.getElementById("password").value);

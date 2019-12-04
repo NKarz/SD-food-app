@@ -5,7 +5,7 @@ import Food2forkAPITest from './components/food2forkAPITest.js';
 import Main from './components/Main.js';
 import SignIn from './components/SignIn.js';
 import SignUp from './components/SignUp.js';
-
+import SortingRecipes from './components/Sorting'
 
 class App extends React.Component {
 

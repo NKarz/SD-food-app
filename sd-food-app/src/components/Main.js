@@ -51,6 +51,8 @@ class Main extends React.Component {
                    <input className="allCheckboxes" type="checkbox" value="Wine" /> Wine <br></br>
                    <input className="allCheckboxes" type="checkbox" value="Mushrooms" /> Mushrooms <br></br>
                    <input className="allCheckboxes" type="checkbox" value="Garlic" /> Garlic <br></br>
+                   <input className="allCheckboxes" type="checkbox" value="Chicken" /> Chicken <br></br>
+                   <input className="allCheckboxes" type="checkbox" value="Shrimp" /> Shrimp <br></br>
 
               </div>
               <br></br>

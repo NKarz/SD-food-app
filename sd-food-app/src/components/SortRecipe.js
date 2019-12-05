@@ -10,7 +10,7 @@ import Food2forkAPITest from '../components/food2forkAPITest.js';
 
 //sprting by recipes
 const fs = require ('fs')
-function SortRecipes
+function SortRecipes(filename)
 
 //read input json filter
 let content = fs.readFileSync (filename)

@@ -6,6 +6,7 @@ import Main from './components/Main.js';
 import SignIn from './components/SignIn.js';
 import SignUp from './components/SignUp.js';
 import SortingRecipesByTime from './components/SortingRecipesByTime'
+import SortRecipe from './components/SortingRecipe'
 
 class App extends React.Component {
 

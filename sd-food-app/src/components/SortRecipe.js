@@ -15,7 +15,7 @@ getRecipes(){
 
 
    */
-/*
+/**/
    //create function to call list of ingredients
 
    function Recipe(props){
@@ -141,4 +141,3 @@ getRecipes(){
      <Cookbook />,
      document.getElementById('root')
    );
-*/

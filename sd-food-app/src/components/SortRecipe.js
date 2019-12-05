@@ -7,8 +7,8 @@ import Food2forkAPITest from '../components/food2forkAPITest.js';
 
 // this will sort the recipes by the user selection "checkbox"
 // this should also sort the shortest amount of time it takes to cook the meal.
-/*
-//sprting by recipes
+
+//sorting by recipes
 const fs = require ('fs')
 function SortRecipes(filename){
 

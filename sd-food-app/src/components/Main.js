@@ -4,6 +4,7 @@ import Food2forkAPITest from '../components/food2forkAPITest.js';
 import SignIn from '../components/SignIn.js';
 import {BrowserRouter, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import html2canvas from 'html2canvas';
 //import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
 import "./Main.css";
@@ -53,7 +54,7 @@ class Main extends React.Component {
                    <input className="allCheckboxes" type="checkbox" value="Garlic" /> Garlic <br></br>
                    <input className="allCheckboxes" type="checkbox" value="Chicken" /> Chicken <br></br>
                    <input className="allCheckboxes" type="checkbox" value="Shrimp" /> Shrimp <br></br> <br></br>
-                   <input type="button" value="+ Add Addition Items" onclick="add(document.forms[0].element.value)"/>  <br></br>
+                   <input type="button" value="+ Add Additional Items" onclick="add(document.forms[0].element.value)"/>  <br></br>
 
               </div>
               <br></br>
@@ -131,7 +132,17 @@ function signOut(){
   })
 }
 function takeScreenShot(){
-
+  html2canvas(document.getElementById("contents")).then (function (canvas) {
+            var tempcanvas=document.createElement('canvas');
+            tempcanvas.width=1900;
+            tempcanvas.height=1000;
+            var context=tempcanvas.getContext('2d');
+            context.drawImage(canvas,0,0, 1900,1000);
+            var link=document.createElement("a");
+            link.href=tempcanvas.toDataURL('image/jpg');   //function blocks CORS
+            link.download = 'screenshot.jpg';
+            link.click();
+        });
 }
 auth.onAuthStateChanged(user => {
   console.log(user)

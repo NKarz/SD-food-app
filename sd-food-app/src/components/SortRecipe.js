@@ -7,6 +7,31 @@ import Food2forkAPITest from '../components/food2forkAPITest.js';
 
 // this will sort the recipes by the user selection "checkbox"
 // this should also sort the shortest amount of time it takes to cook the meal.
+
+//sprting by recipes
+const fs = require ('fs')
+function SortRecipes
+
+//read input json filter
+let content = fs.readFileSync (filename)
+let result = JSON.readFileSync(filename)
+
+//only srt out the hit Items
+if(result && result.hits && Array.isArray(result.hits)){
+    result.hits.sort((a, b) => {
+	  //sort the key recipes hits
+      return a.recipe.hits - b.recipe.hits
+    })
+  }
+  //save output as a json file named 'output'
+  fs.writeFileSync('./output.json',JSON.stringify(result))
+}
+
+//sort function
+SortRecipes('example.json')
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
 getRecipes(){
   var base_url;

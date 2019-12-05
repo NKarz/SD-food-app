@@ -52,12 +52,14 @@ class Main extends React.Component {
                    <input className="allCheckboxes" type="checkbox" value="Mushrooms" /> Mushrooms <br></br>
                    <input className="allCheckboxes" type="checkbox" value="Garlic" /> Garlic <br></br>
                    <input className="allCheckboxes" type="checkbox" value="Chicken" /> Chicken <br></br>
-                   <input className="allCheckboxes" type="checkbox" value="Shrimp" /> Shrimp <br></br>
+                   <input className="allCheckboxes" type="checkbox" value="Shrimp" /> Shrimp <br></br> <br></br>
+                   <input type="button" value="+ Add Addition Items" onclick="add(document.forms[0].element.value)"/>  <br></br>
 
               </div>
               <br></br>
               <button type="button" className="btn btn-info" onClick={() => this.testfunction()}>Submit</button>
               <br></br><br></br>
+
               <button type="button" className="btn btn-info" id="screenshotbutton" onClick={(takeScreenShot)}>Screenshot</button>
 
            </div>

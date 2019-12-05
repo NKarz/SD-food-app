@@ -1,10 +1,4 @@
-// this will sort the recipes by the user selection "checkbox"
-// this should also sort the shortest amount of time it takes to cook the meal.
 
-
-//array sort
-//var checkbox = "checkbox"
-//<button onclick =""
 
 //cheerio is throwing an error on the page. Sort time is not working here
 /*

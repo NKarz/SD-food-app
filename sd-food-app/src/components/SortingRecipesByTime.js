@@ -100,22 +100,6 @@ sortRecipe('newjson.json', function (error, result) {
 
 
 
-Skip to content
-Using UNC Charlotte Mail with screen readers
-
-(no subject)
-Inbox
-x
-
-Yuehan Lan
-10:27 PM (0 minutes ago)
-to me
-
-
- sortRecipe.js
-
-Attachments area
-
 
 function sortByRecipe(data){
   let result = data

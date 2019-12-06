@@ -1,11 +1,13 @@
 
 //This code is used to sort the recipe by time
+import example from '../components/example.json';
+
 /*
-const fs = require('fs')
+var fs = require('fs')
 function sortByRecipe(filename){
   // read input json file
-  let content = fs.readFileSync(filename)
-  let result = JSON.parse(content)
+  var content = fs.readFileSync(filename)
+  var result = JSON.parse(content)
   //only sort hits[]
   if(result && result.hits && Array.isArray(result.hits)){
     result.hits.sort((a, b) => {
@@ -22,7 +24,7 @@ sortByRecipe('example.json')
 
 
 
-*/
+
 
 
 //cheerio is throwing an error on the page. Sort time is not working here

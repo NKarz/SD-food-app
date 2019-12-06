@@ -1,4 +1,29 @@
 
+//This code is used to sort the recipe by time
+
+const fs = require('fs')
+function sortByRecipe(filename){
+  // read input json file
+  let content = fs.readFileSync(filename)
+  let result = JSON.parse(content)
+  //only sort hits[]
+  if(result && result.hits && Array.isArray(result.hits)){
+    result.hits.sort((a, b) => {
+	  //sort by key 'totalTime'
+      return a.recipe.totalTime - b.recipe.totalTime
+    })
+  }
+  //save output as a json file named 'output'
+  fs.writeFileSync('./output.json',JSON.stringify(result))
+}
+
+//sort function
+sortByRecipe('example.json')
+
+
+
+
+
 
 //cheerio is throwing an error on the page. Sort time is not working here
 /*

@@ -1,6 +1,6 @@
 
 //This code is used to sort the recipe by time
-
+/*
 const fs = require('fs')
 function sortByRecipe(filename){
   // read input json file
@@ -22,7 +22,7 @@ sortByRecipe('example.json')
 
 
 
-
+*/
 
 
 //cheerio is throwing an error on the page. Sort time is not working here

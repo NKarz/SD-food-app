@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+/*
+
+>>>>>>> Stashed changes
 setInterval(function(){
 var main = document.getElementById( 'listofrec2' );
 
@@ -7,3 +12,7 @@ var main = document.getElementById( 'listofrec2' );
     main.appendChild( elem );
 });
 }, 3000);
+<<<<<<< Updated upstream
+=======
+*/
+>>>>>>> Stashed changes
